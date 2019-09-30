@@ -1,0 +1,45 @@
+<div class="content">
+    <div class="taskWindow">
+
+        <div class="title">
+            <button class="button" style="vertical-align:middle" routerLink="../../home"><span>Return back
+                </span></button>
+            <div class="text">
+                Task details:
+            </div>
+
+        </div>
+
+        <div class="taskDesc">
+
+            <div class="row justify-content-center">
+                <div class="col-md-1 col-lg-1">
+                    <strong>ID: </strong> {{post[0].id}}
+                </div>
+                <div class="col-md-4 col-lg-4">
+                    <strong>Name: </strong> {{post[0].name}}
+                </div>
+                <div class="col-md-4 col-lg-4">
+                    <strong>Description: </strong> {{post[0].description}}
+
+                </div>
+                <div class="col-md-3 col-lg-3">
+                    <strong>Date: </strong> {{post[0].date}}
+
+                </div>
+            </div>
+
+            <div class="taskButtons row justify-content-center">
+                <div class="cold-md-12 col-lg-12">
+                    <button type="button" mat-raised-button color="primary"
+                        (click)="openDialog('Update', post[0])">Edit</button>
+                    <button type="button" mat-raised-button color="warn"
+                        (click)="openDialog('Delete One', post[0])">Delete</button>
+
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+</div>

@@ -1,0 +1,27 @@
+<!-- Modal displaying when user clicks on Action button -->
+<h1 mat-dialog-title *ngIf="action != 'Delete One'"><strong>{{action}} Task</strong></h1>
+<h1 mat-dialog-title *ngIf="action == 'Delete One'"><strong>Delete Task</strong></h1>
+<div mat-dialog-content class="myModal">
+  <mat-form-field [hidden]="true" *ngIf="action != 'Delete' && action !='Delete One'">
+    <input type="number" min=1 placeholder="ID" matInput [(ngModel)]="local_data.id">
+  </mat-form-field>
+  <mat-form-field *ngIf="action != 'Delete' && action !='Delete One'">
+    <input type="text" placeholder="Name" matInput [(ngModel)]="local_data.name">
+  </mat-form-field>
+  <mat-form-field *ngIf="action != 'Delete' && action !='Delete One'">
+    <input type="text" placeholder="Description" matInput [(ngModel)]="local_data.description">
+  </mat-form-field>
+  <mat-form-field [hidden]="true" *ngIf="action != 'Delete' && action !='Delete One'">
+    <input type="text" placeholder="Date" matInput [(ngModel)]="local_data.date">
+  </mat-form-field>
+  <p *ngIf="action == 'Delete'">Are you sure you want to delete this records?</p>
+  <p *ngIf="action == 'Delete One'">Are you sure you want to delete this record?</p>
+</div>
+<div mat-dialog-actions>
+  <button type="button" mat-raised-button color="primary" (click)="doAction()" *ngIf="action != 'Delete One'; else elseTemplate">{{action}}</button>
+  <button type="button" mat-raised-button color="warn"    (click)="closeDialog()">Cancel</button>
+  <ng-template #elseTemplate>
+      <button type="button" mat-raised-button color="primary" (click)="doAction()">Delete</button>
+  </ng-template>
+  
+</div>

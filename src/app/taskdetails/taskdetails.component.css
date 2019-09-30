@@ -1,0 +1,81 @@
+:host {
+    width: 100%;
+}
+
+.title {
+    width: 100%;
+    font-size: x-large;
+    margin-bottom: 50px;
+    display: inline-block;
+}
+
+.text {
+    font-weight: 600;
+    margin-top: 50px;
+    border-bottom: 1px lightgray solid;
+}
+
+.taskDesc {
+    font-size: 18px;
+    align-items: center;
+    font-weight: 600
+
+}
+
+.row {
+    margin-bottom: 50px;
+}
+
+mat-icon {
+    font-size: x-large;
+}
+
+strong {
+   margin-right: 20px;
+}
+
+.button {
+    display: inline-block;
+    border-radius: 4px;
+    background-color: #f4511e;
+    border: none;
+    color: #FFFFFF;
+    text-align: center;
+    transition: all 0.5s;
+    cursor: pointer;
+    outline: none;
+
+  }
+  
+  .button span {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+  }
+  
+  .button span:after {
+    content: '\00bb';
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -20px;
+    transition: 0.5s;
+  }
+  
+  .button:hover span {
+    padding-right: 25px;
+  }
+  
+  .button:hover span:after {
+    opacity: 1;
+    right: 0;
+  }
+
+.taskButtons button:hover {
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+}
+
+.taskButtons button {
+    margin-right: 10px;
+}
