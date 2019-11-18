@@ -1,2 +1,2 @@
-# tomozulj.github.io
-App for managing tasks
+# Simple-To-Do-App
+Angular App for managing tasks
